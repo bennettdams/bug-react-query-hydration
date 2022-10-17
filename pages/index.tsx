@@ -9,7 +9,12 @@ const Home: NextPage = () => {
     // staleTime: 5 * 60 * 1000,
   })
 
-  return <div>username: {data?.name}</div>
+  return <div>Username (fetched on the client): {data?.name}</div>
 }
+
+// 🟦 Uncomment this to hide the error
+// const Home: NextPage = () => {
+//   return <div>Home</div>
+// }
 
 export default Home

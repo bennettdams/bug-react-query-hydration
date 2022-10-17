@@ -1,9 +1,4 @@
-import {
-  dehydrate,
-  DehydratedState,
-  QueryClient,
-  useQuery,
-} from '@tanstack/react-query'
+import { dehydrate, DehydratedState, QueryClient } from '@tanstack/react-query'
 import type { GetServerSideProps, NextPage } from 'next'
 import { fetchUser } from '../../data/fetch'
 
@@ -16,6 +11,7 @@ export const getServerSideProps: GetServerSideProps<{
 
   const queryClient = new QueryClient()
 
+  // 🟦 Uncomment this to hide the error
   await queryClient.prefetchQuery(['user', { userId: '1' }], fetchUser)
 
   return {
@@ -26,13 +22,7 @@ export const getServerSideProps: GetServerSideProps<{
 }
 
 const User: NextPage = () => {
-  const { data } = useQuery(['user', { userId: '1' }], fetchUser, {
-    // refetchOnMount: false,
-    // refetchOnWindowFocus: false,
-    // staleTime: 5 * 60 * 1000,
-  })
-
-  return <div>username: {data?.name}</div>
+  return <p>User route (no data fetched on the client, only on the server)</p>
 }
 
 export default User

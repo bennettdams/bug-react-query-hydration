@@ -44,7 +44,15 @@ export default function MyApp({
             </span>
           </div>
 
+          {/* 🟦 Uncomment this to hide the error */}
+          {/* <Link href="/foo">Foo</Link> */}
+
           <Component {...pageProps} />
+
+          {/* 🟦 Uncomment this to hide the error */}
+          {/* <div>
+            <Component {...pageProps} />
+          </div> */}
         </main>
       </Hydrate>
     </QueryClientProvider>
