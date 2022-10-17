@@ -25,9 +25,9 @@ You can make small changes in the repo that will make the error go away (changin
 or
 
 - see `pages/user-gssp/[userId].tsx`
-  - Commenting out the prefetching (`queryClient.prefetchQuery(...)`)
+  - Disable prefetching (`queryClient.prefetchQuery(...)`)
 
 or
 
 - see `pages/index.tsx`
-  - Uncommenting fetching data on the client (`... useQuery(['user', { userId: '1' }], fetchUser, ...`)
+  - Disable fetching data on the client (`... useQuery(['user', { userId: '1' }], fetchUser, ...`)
