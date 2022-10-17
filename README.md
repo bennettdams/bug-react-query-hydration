@@ -1,6 +1,6 @@
 # Reproduction of React Query (`v4`) hydration bug
 
-See: <https://github.com/trpc/trpc/issues/2919>
+See: <https://github.com/TanStack/query/issues/4335>
 
 Steps:
 
